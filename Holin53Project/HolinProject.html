@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HoLin53精釀餐館</title>
+    <link rel="icon" href="./mainpageimg/Holin53_Logo.png">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="./Holincss/HolinProject.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="js/bootstrap.bundle.js"></script>
+
+    <!-- 設定繁體中文字體 -->
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- 是否滿18 -->
+    <div id="age-modal" class="age-modal">
+        <div class="modal-content ">
+            <div class="modal-logo pb-4">
+                <img src="./mainpageimg/Holin53_Logo_BG.png" alt="Holin53 Logo">
+            </div>
+
+            <h5 class="modal-desc1">請問您是否年滿 18 歲？</h5>
+            <p class="modal-desc2">Are you at leat 18 years old?</p>
+
+            <p class="warning-text">
+                <i class="bi bi-exclamation-triangle"></i> 未成年請勿飲酒，飲酒過量有害健康
+            </p>
+
+            <div class="btn-group">
+                <button id="btn-yes" class="btn-enter fw-bold">YES</button>
+                <button id="btn-no" class="btn-leave">NO</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 導覽列 -->
+    <!-- class="container-fluid"將導覽列填滿螢幕寬度(是給外層容器用的，讓容器填滿寬度) -->
+    <nav class="navbar navbar-expand-lg navbar-dark navBarbackcolor fixed-top">
+        <div class="container-fluid">
+
+            <!-- 左邊主標 -->
+            <a class="navbar-brand" href="HolinProject.html">
+                <img src="./mainpageimg/Holin53_Logo_BG.png" class="weblogo">53</a>
+
+            <!-- 螢幕小的時候有按鈕可以呈現導覽列 -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTopic">
+                <span class="navbar-toggler-icon"></span></button>
+
+            <!-- 導覽列副標題們 -->
+            <div class="collapse navbar-collapse" id="navbarTopic">
+                <ul class="navBar mx-auto">
+                    <li><a href="HolinProject_About.html">關於Holin</a></li>
+                    <li><a href="HolinProject_Products.html">精釀與瓶裝酒</a></li>
+                    <li><a href="HolinProject_Menu.html">小食菜單</a></li>
+                    <li><a href="HolinProject_News.html">活動資訊</a></li>
+                    <li><a href="HolinProject_ReservationAndContact.html">訂位與聯絡</a></li>
+
+                    <li class="nav-item"> <a href="https://www.instagram.com/holin.53/" target="_blank">
+                            <i class="bi bi-instagram" style="font-size: 1.2rem;"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item "> <a href="https://www.facebook.com/holin.holin53?locale=zh_TW"
+                            target="_blank">
+                            <i class="bi bi-facebook" style="font-size: 1.2rem;"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item"> <a href="https://lin.ee/Bhou0cv" target="_blank">
+                            <i class="bi bi-line" style="font-size: 1.2rem;"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- 背景圖 -->
+
+    <div class="video-container">
+        <video autoplay muted loop playsinline class="back-video">
+            <source src="./Video/beerBG4.0.mp4" type="video/mp4">
+            您的瀏覽器不支援 HTML5 影片。
+        </video>
+    </div>
+
+    <div class="bg-text">
+        <h1 style="font-size: 40px;">以精釀的層次，細讀生活的韻味。</h1>
+        <p style="font-size: 20px;">HoLin53 Craft Beer & Bistro.</p>
+    </div>
+
+
+
+    <!-- 活動 -->
+    <section class="py-5 position-relative activity-section">
+        <div class="activity-bg-decoration"></div>
+
+        <div class="container position-relative" style="z-index: 2;">
+            <div class="row align-items-center">
+                
+
+                <div class="col-lg-6 mb-5 mb-lg-1">
+                    <div class="activity-img-wrapper">
+                        <img src="./mainpageimg/NewYearActivity.png" class="img-fluid" alt="最新活動">
+                        <div class="gold-border"></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 ps-lg-5">
+                    <div class="text-center text-lg-start">
+
+                        <h2 class="display-5 fw-bold mb-3 text-white activity-title">
+                            2026 跨年電音派對<br>
+                            <span style="color: #C5A059; font-family: 'Noto Serif TC', serif;">微醺倒數 Night</span>
+                        </h2>
+
+                        <p class="text-light opacity-75 mb-4" style="font-size: 1.1rem; line-height: 1.8;">
+                            準備好迎接 2026 了嗎？<br>
+                            Holin53 重磅邀請 <strong>DJ SEVEN</strong> 與 <strong>Labbi</strong> 聯手炸場！<br>
+                            12/31 當晚 <span class="text-warning fw-bold">精釀啤酒無限暢飲</span>，<br>
+                            全場站席，讓我們隨著節拍 High 到凌晨！
+                        </p>
+
+                        <a href="HolinProject_ReservationAndContact.html"
+                            class="btn btn-gold-shine px-4 py-3 rounded-5 fw-bold">
+                            <i class="bi bi-ticket-perforated-fill me-2"></i>點我進行預約
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- 精選 -->
+    <section class="py-5" style="background-color: #f1f1f1;">
+        <div class="container text-center">
+            <div class="mb-5">
+                <h2 class="fw-bold" style="color: #23373E;">Holin 精選</h2>
+                <p class="text-secondary">味蕾的探索，從這裡開始</p>
+            </div>
+
+            <div class="row g-4 holinfeature">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="./mainpageimg/國產酒合體.jpg" class="card-img-top"
+                            style="height: 250px; object-fit: cover;" alt="精釀啤酒">
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold">在地精釀</h4>
+                            <p class="card-text text-secondary">以糯米釀出純粹甘甜，帶來如香檳般的清爽層次。</p>
+                            <a href="HolinProject products.html" class="btn btn-sm btn-outline-dark mt-2">探索酒單</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="./mainpageimg/精選小食.png" class="card-img-top" style="height: 250px; object-fit: cover;"
+                            alt="下酒菜">
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold">經典小食</h4>
+                            <p class="card-text text-secondary">金黃酥脆的冰花煎餃是專為搭配精釀而生的靈魂伴侶。</p>
+                            <a href="HolinProject menu.html" class="btn btn-sm btn-outline-dark mt-2">瀏覽菜單</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="./mainpageimg/關於店內3.jpg" class="card-img-top"
+                            style="height: 250px; object-fit: cover;" alt="聚會空間">
+                        <div class="card-body">
+                            <h4 class="card-title fw-bold">聚會首選</h4>
+                            <p class="card-text text-secondary">Holin的露營儀式感，在微醺中找到安心的棲息地。</p>
+                            <a href="HolinProject ReservationAndContact.html"
+                                class="btn btn-sm btn-outline-dark mt-2">線上訂位</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </section>
+
+
+
+
+
+    <!-- 口碑推薦 -->
+    <section class="py-5" style="background-color:#F2EFE9;">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2 class="fw-bold" style="color: #23373E;">口碑推薦</h2>
+                <p class="text-secondary" style="font-family: 'Noto Serif TC', serif;">聽聽酒友如何享受 Holin 的微醺時光</p>
+            </div>
+
+            <div class="row align-items-center justify-content-center g-5">
+
+                <div id="carouselExampleFade" class="carousel slide carousel-box col-lg-5" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="4500">
+                            <img src="./mainpageimg/主頁女皇爵.jpg" class="img-fluid" style="border-radius: 5px;"
+                                alt="部落客推薦美食">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="4500">
+                            <img src="./mainpageimg/pizza.jpg" class="img-fluid" style="border-radius: 5px;"
+                                alt="部落客推薦美食">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="4500">
+                            <img src="./mainpageimg/beer3.jpg" class="img-fluid" style="border-radius: 5px;"
+                                alt="部落客推薦美食">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="4500">
+                            <img src="./mainpageimg/炸物.jpg" class="img-fluid" style="border-radius: 5px;" alt="部落客推薦美食">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+
+                <div class="col-lg-6">
+                    <div class="ps-lg-4 text-center text-lg-start">
+                        <div class="d-inline-flex align-items-center mb-3 border-bottom border-dark pb-2">
+                            <small class="fw-bold ls-1 text-uppercase" style="color: #C5A059;">Big Shark
+                                Blog</small>
+                        </div>
+
+                        <h3 class="fw-bold mb-3" style="color: #23373E; line-height: 1.4;">
+                            大雅精釀餐館<br>
+                        </h3>
+
+                        <blockquote class="text-secondary mb-4"
+                            style="font-size: 1.05rem; line-height: 1.9; font-family: 'Noto Serif TC', serif; font-style: italic;">
+                            "Holin53 給人的感覺非常放鬆，不像一般酒吧那麼吵雜... 炸物拼盤及金黃酥脆的冰花煎餃，絕對是搭配精釀啤酒的靈魂伴侶。"
+                        </blockquote>
+
+                        <div class="d-flex align-items-center justify-content-center justify-content-lg-start gap-4"
+                            style="font-family: 'Noto Serif TC'">
+                            <a href="https://bigsharkgogogo.tw/holin53/" target="_blank" class="btn btn-read-story">
+                                閱讀完整文章 <i class="bi bi-arrow-right ms-1"></i>
+                            </a>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <button onclick="topFunction()" id="myBtn" title="btn-back-to-top">Top</button>
+
+
+    <!-- 底部為聯絡資訊 -->
+    <section>
+        <footer class="main-footer py-5">
+            <div class="container">
+
+                <div class="row align-items-center gy-4">
+
+                    <div class="col-12 col-md-4 text-center text-md-start">
+                        <a href="HolinProject.html">
+                            <img src="./mainpageimg/Holin53_Logo_BG.png" alt="Logo" class="footer-logo">
+                        </a>
+                    </div>
+
+                    <div class="col-12 col-md-4 text-center text-md-center">
+                        <ul class="list-unstyled text-secondary footer-contact-list">
+                            <li class="mb-2">
+                                <i class="bi bi-geo-alt-fill me-2 "></i>
+                                臺中市大雅區中清北街53號
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-telephone-fill me-2"></i>
+                                0917-407-408
+                            </li>
+                            <li class="mb-0">
+                                <i class="bi bi-clock-fill me-2"></i>
+                                週一~週六 18:00 - 23:00
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-md-4 text-center">
+                        <div class="social-icons-group">
+                            <a href="https://www.facebook.com/holin.holin53?locale=zh_TW" target="_blank">
+                                <i class="bi bi-facebook mb-0"></i>
+                            </a>
+                            <a href="https://www.instagram.com/holin.53/" target="_blank">
+                                <i class="bi bi-instagram mb-0"></i>
+                            </a>
+                            <a href="https://lin.ee/Bhou0cv" target="_blank">
+                                <i class="bi bi-line mb-0"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <hr class="border-secondary my-4">
+            </div>
+        </footer>
+    </section>
+
+
+    <button onclick="topFunction()" id="myBtn" title="btn-back-to-top">Top</button>
+
+    <div class="footer-warning fixed-bottom text-center py-3 fw-bold">
+        禁止酒駕 🚫 未滿十八歲 禁止飲酒
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const modal = document.getElementById("age-modal");
+            const btnYes = document.getElementById("btn-yes");
+            const btnNo = document.getElementById("btn-no");
+
+            // 檢查是否已經驗證過 (用 localStorage)
+            if (localStorage.getItem("ageVerified") === "true") {
+                modal.style.display = "none";
+            }
+
+            // 點擊「是」
+            btnYes.addEventListener("click", function () {
+                localStorage.setItem("ageVerified", "true"); // 記住使用者已滿18歲
+                modal.style.opacity = "0";
+                setTimeout(() => {
+                    modal.style.display = "none";
+                }, 500);
+            });
+
+            // 點擊「否」
+            btnNo.addEventListener("click", function () {
+                alert("很抱歉，本網站內容僅供 18 歲以上人士瀏覽。");
+                window.location.href = "https://www.google.com"; // 或是導向其他地方
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const slides = document.querySelectorAll('.about-slider .slide');
+            let currentSlide = 0;
+            const slideInterval = 3000; // 3000毫秒 = 3秒換一次
+
+            function nextSlide() {
+                // 1. 移除目前這張的 active
+                slides[currentSlide].classList.remove('active');
+
+                // 2. 算出下一張的索引 (如果是最後一張，就回到 0)
+                currentSlide = (currentSlide + 1) % slides.length;
+
+                // 3. 幫下一張加上 active
+                slides[currentSlide].classList.add('active');
+            }
+
+            // 啟動計時器
+            setInterval(nextSlide, slideInterval);
+        });
+    </script>
+
+
+
+    <script>
+        // 監聽網頁滾動事件
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 200) { // 如果滾動超過 50px
+                navbar.classList.add('scrolled'); // 加上變色 class
+            } else {
+                navbar.classList.remove('scrolled'); // 變回透明
+            }
+        });
+    </script>
+
+    <script>
+        // 1. 抓取按鈕元素
+        let mybutton = document.getElementById("myBtn");
+
+        // 2. 監聽網頁捲動事件 (當網頁捲動時執行 scrollFunction)
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            // 如果捲動超過 100px (document.body 是給 Safari 看的，documentElement 是給 Chrome/Firefox 看的)
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                mybutton.style.display = "block"; // 顯示按鈕
+            } else {
+                mybutton.style.display = "none";  // 隱藏按鈕
+            }
+        }
+
+        // 3. 監聽點擊事件 (點下去後回到頂端)
+        mybutton.addEventListener("click", backToTop);
+
+        function backToTop() {
+            // behavior: 'smooth' 讓捲動有平滑動畫，不會瞬間跳上去
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+
+</html>
