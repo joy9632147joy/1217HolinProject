@@ -33,6 +33,7 @@
      transform: scale(1.05);
  }
 
+
  /* -----漢堡----- */
  .navbar-toggler:focus {
      border-radius: 10px;
@@ -67,15 +68,6 @@
  }
 
 
-
-
- /* 滑鼠移上去的效果 (Hover) */
- .navbar .btn-login:hover {
-     background-color: #C5A059;
-     color: #23373E;
-     box-shadow: 0 0 10px rgba(197, 160, 89, 0.6);
-     transform: translateY(-2px);
- }
 
  /* --- RWD 手機版微調 --- */
  @media (max-width: 991px) {

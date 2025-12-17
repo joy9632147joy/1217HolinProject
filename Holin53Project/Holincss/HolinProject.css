@@ -100,7 +100,7 @@
  .weblogo {
      object-fit: contain;
      width: 120px;
-     max-height: 80px;
+     max-height: 100px;
      transition: transform 0.3s;
  }
 
@@ -114,8 +114,7 @@
 
 
  /* -----漢堡----- */
- .navbar-toggler:focus,
- .navbar-toggler:hover {
+ .navbar-toggler:focus {
      border-radius: 10px;
      box-shadow: none;
      border: 1px solid #ebe0cc;
@@ -123,7 +122,8 @@
 
  ul.navBar {
      list-style: none;
-     margin: 0; /*清除瀏覽器預設的上下留白*/
+     margin: 0;
+     padding: 0;
  }
 
  ul.navBar li {
@@ -172,11 +172,6 @@
          padding: 10px 0;
      }
 
-     /* 5. 按鈕寬度 */
-     .btn-login {
-         width: 30%;
-         text-align: center;
-     }
  }
 
 
@@ -255,7 +250,7 @@
      z-index: 1;
      transition: all 0.3s ease;
  }
- 
+
  .activity-img-wrapper:hover {
      transform: scale(1.02);
  }
@@ -282,17 +277,18 @@
 
 
 
-/* -----Holin 精選----- */
-.card:hover{
-    transform: scale(1.02);
-}
+ /* -----Holin 精選----- */
+ .card:hover {
+     transform: scale(1.02);
+ }
 
 
 
 
- /* -----口碑推薦-輪播圖淡入出速度----- */
- .carousel- .carousel-item {
-     transition: opacity 3s ease-in-out;
+ /* -----口碑推薦----- */
+ .carousel-box:hover {
+     transform: scale(1.02);
+     transition: transform 0.3s ease;
  }
 
 
@@ -350,7 +346,7 @@
      }
 
      /* 在手機版讓聯絡資訊置中，而不是靠右 */
-    
+
  }
 
  .footer-warning {
@@ -365,12 +361,12 @@
  /* 至頂箭頭 */
  #myBtn {
      display: none;
+     /*負責第0秒隱藏 開始滾動就變成JS的判斷式*/
      position: fixed;
      bottom: 80px;
      right: 30px;
      z-index: 99;
      border: none;
-     outline: none;
      background-color: rgba(35, 55, 62, 0.95);
      color: #ebe0cc;
      padding: 15px;

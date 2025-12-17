@@ -1,0 +1,63 @@
+CSS
+1.img-fluid 圖片隨著父容器伸縮且不跑版(讓圖片填滿但不跑版)
+2.border-box 寬度包含padding/border 動padding不爆版
+3.object-fit:cover 搭配w-100 圖片隨著父容器填滿 多餘會剪裁 不跑版
+4.d-flex justify(水平y) align(垂直x)
+5.flex-wrap 空間不構自動換行 解決flexbox鎖死不換行機制
+6.z-index 用於不被覆蓋掉 !!!position非static才有用!!!
+7.position: relative; 除了top, left, right, bottom這些z-index也要有他才能設定成功
+ -z-index: 1~10：普通的漂浮元素（如小標籤）。
+ -z-index: 100：下拉選單（Dropdown）、導覽列（Navbar）。
+ -z-index: 1000+：全螢幕的蓋板廣告、彈出視窗（Modal）、警告訊息。
+8.object-fit: contain 
+9. ransition: transform 0.3s; 平滑過度 x秒浮出來
+10.transform: scale(1.05); 放大5%
+
+11.display: block; 變成區塊才可控padding/margin
+12.overflow: hidden; 左上對左上容易留頭去尾 多餘地方直接隱藏 (object-fit:cover現代做法 自動調到完美位子)
+13.linear-gradient(...)線性漸層
+14.transition: opacity 3s ease-in-out;
+15.backquote自動給它左右縮排
+16.position: fixed 要指定定位(箭頭保持頁面下方等等)要寫他 不然bottom.right都會在靜態中不受控
+17.opacity 不透明的
+18.:focus 跟 :hover的差異 後者在收機或平班會失效因為無游標
+
+
+
+
+BS
+1.data-bs-toggle="collapse" 這個按鈕的功能是切換 (Toggle) 摺疊狀態
+2.data-bs-target="#navbarTopic" 去控制id為...
+
+
+
+
+
+JS
+1.JS裡系統自動生成classlist
+2.=> 意思為 輸入=>輸出
+3.sort -> 判斷回傳值的正副 來決定 新到舊或舊到新
+4. ? 三元子運算 -> 條件?(判斷為true的值:判斷為false的值)
+5. ==(只比數值) / ===(比型別跟數值)
+6.active作用
+7.DOMContentLoaded 告訴 JS：等 HTML 長出來後 再執行這些程式碼
+ -load (window.onload) 要等所優資源全部出來(包含CSS 大圖 動畫 等等)
+
+
+
+
+aspect-ratio
+
+
+----------------------------------------------------------
+1.小專檔案名稱只可用英文(不可數字中文 符號盡量不要)
+2.內容是固定HTML還是不固定(使用者操作以後 畫面會改變JS)
+3.(JS10-31檔案)寫在body/head標籤裡面->差異:如果JS需要改變元素，就必須放在body
+4.使用者會有那些操作  ????
+5.小專JS用let不要用其他兩個
+6.若有資料連結的問題，沒有伺服器，那先把資料存在JSON(登入/購物車)
+
+
+
+
+

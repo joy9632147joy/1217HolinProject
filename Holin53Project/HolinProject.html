@@ -13,7 +13,7 @@
     <script src="js/bootstrap.bundle.js"></script>
 
     <!-- 設定繁體中文字體 -->
-    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto Serif TC, sans-serif+XiaoWei&display=swap" rel="stylesheet">
 
 </head>
 
@@ -352,36 +352,14 @@
                 modal.style.opacity = "0";
                 setTimeout(() => {
                     modal.style.display = "none";
-                }, 500);
+                }, 500); //500毫秒
             });
 
             // 點擊「否」
             btnNo.addEventListener("click", function () {
                 alert("很抱歉，本網站內容僅供 18 歲以上人士瀏覽。");
-                window.location.href = "https://www.google.com"; // 或是導向其他地方
+                window.location.href = "https://maps.app.goo.gl/YMkfuPDTutvSJMuFA"; // 或是導向其他地方
             });
-        });
-    </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const slides = document.querySelectorAll('.about-slider .slide');
-            let currentSlide = 0;
-            const slideInterval = 3000; // 3000毫秒 = 3秒換一次
-
-            function nextSlide() {
-                // 1. 移除目前這張的 active
-                slides[currentSlide].classList.remove('active');
-
-                // 2. 算出下一張的索引 (如果是最後一張，就回到 0)
-                currentSlide = (currentSlide + 1) % slides.length;
-
-                // 3. 幫下一張加上 active
-                slides[currentSlide].classList.add('active');
-            }
-
-            // 啟動計時器
-            setInterval(nextSlide, slideInterval);
         });
     </script>
 
@@ -391,8 +369,8 @@
         // 監聽網頁滾動事件
         window.addEventListener('scroll', function () {
             const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 200) { // 如果滾動超過 50px
-                navbar.classList.add('scrolled'); // 加上變色 class
+            if (window.scrollY > 100) { 
+                navbar.classList.add('scrolled'); // 加上變數 class
             } else {
                 navbar.classList.remove('scrolled'); // 變回透明
             }
@@ -410,7 +388,7 @@
 
         function scrollFunction() {
             // 如果捲動超過 100px (document.body 是給 Safari 看的，documentElement 是給 Chrome/Firefox 看的)
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 600) {
                 mybutton.style.display = "block"; // 顯示按鈕
             } else {
                 mybutton.style.display = "none";  // 隱藏按鈕
@@ -421,7 +399,6 @@
         mybutton.addEventListener("click", backToTop);
 
         function backToTop() {
-            // behavior: 'smooth' 讓捲動有平滑動畫，不會瞬間跳上去
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>

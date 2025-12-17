@@ -70,22 +70,6 @@ ul.navBar li a {
     margin-left: 25px;
 }
 
-/*-----登入按鈕-----*/
-.btn-login {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    color: whitesmoke;
-    border: 1px solid whitesmoke;
-    font-family: "Noto Serif TC", sans-serif;
-
-    padding: 7px 20px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 15px;
-    white-space: nowrap;
-}
 
 /* 滑鼠移上去的效果 (Hover) */
 .navbar .btn-login:hover {
@@ -118,23 +102,11 @@ ul.navBar li a {
         padding: 10px 0;
     }
 
-    /* 5. 登入按鈕置中 */
-    .navbar-collapse .d-flex {
-        border: 0px solid transparent;
-        justify-content: center;
-        margin-top: 10px;
-    }
-
     .social-gap {
         margin-left: 0;
         padding-bottom: 10px;
     }
 
-    /* 6. 按鈕寬度 */
-    .btn-login {
-        width: 30%;
-        text-align: center;
-    }
 }
 
 
@@ -204,6 +176,7 @@ html {
     margin-bottom: 20px;
 }
 
+
 .btn-custom {
     background-color: transparent;
     border: 1px solid #C5A059;
@@ -212,6 +185,17 @@ html {
     padding: 8px 20px;
     border-radius: 5px !important;
     transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .btn-custom {
+        font-size: 0.85rem;
+        padding: 8px 15px;
+    }
+    
+    .btn-group {
+        gap: 10px;
+    }
 }
 
 
@@ -269,6 +253,12 @@ html {
     transition: transform 0.5s ease;
 }
 
+/* 手機版圖片調整 */
+@media (max-width: 768px) {
+    .beer-box {
+        height: 300px; /* 手機版稍微降低高度 */
+    }
+}
 
 
 /* 文字區塊 */
