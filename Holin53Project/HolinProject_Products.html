@@ -13,7 +13,7 @@
     <script src="js/bootstrap.bundle.js"></script>
 
     <!-- 設定繁體中文字體 -->
-    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto Serif TC, sans-serifdisplay=swap" rel="stylesheet">
 
 </head>
 
@@ -57,10 +57,7 @@
                             <i class="bi bi-line" style="font-size: 1.2rem;"></i>
                         </a>
                     </li>
-
-
                 </ul>
-
             </div>
         </div>
     </nav>
@@ -76,22 +73,21 @@
     <section class="products-section py-5">
         <div class="container">
 
-            <div class="section-header text-center mb-5">
+            <div class="section-header text-center mb-1">
                 <span class="subtitle-badge">Premium & Class</span>
-                <h2 class="main-title">嚴選酒單</h2>
+                <h2 class="main-title mt-3">嚴選酒單</h2>
                 <p class="sub-description">職人精釀．世界瓶裝．探索獨特風味</p>
             </div>
 
 
             <div class="row mb-5">
-                <div class="col-12 text-center beertext fw-bold">
-                    <div class="btn-group">
-                        <button onclick="filterProducts('national',this)" class="btn btn-custom">進口精釀啤酒</button>
+                <div class="col-12 text-center fw-bold">
+                    <div class="btn-group beertext">
+                        <button onclick="filterProducts('national',this)" class="btn btn-custom active">進口精釀啤酒</button>
                         <button onclick="filterProducts('domestic',this)" class="btn btn-custom">國產精釀啤酒</button>
                         <button onclick="filterProducts('rice',this)" class="btn btn-custom">小米氣泡酒</button>
                         <button onclick="filterProducts('japan',this)" class="btn btn-custom">日系啤酒</button>
                         <button onclick="filterProducts('grapewine',this)" class="btn btn-custom">紅白酒</button>
-
                     </div>
 
                 </div>
@@ -170,11 +166,11 @@
 
     <script>
         const category = [
-            { id: "national", label: "進口精釀啤酒" },
-            { id: "domestic", label: "國產精釀啤酒" },
-            { id: "rice", label: "小米氣泡酒" },
-            { id: "japan", label: "日系啤酒" },
-            { id: "grapewine", label: "紅白酒" }
+            { type: "national", label: "進口精釀啤酒" },
+            { type: "domestic", label: "國產精釀啤酒" },
+            { type: "rice", label: "小米氣泡酒" },
+            { type: "japan", label: "日系啤酒" },
+            { type: "grapewine", label: "紅白酒" }
 
         ]
 
@@ -290,7 +286,7 @@
             },
 
             // --- 國產精釀啤酒 (對應 id="domestic") ---
-            
+
             {
                 id: "r-1",
                 name: "醜啤-拉格",
@@ -381,7 +377,7 @@
                 price: 200,
                 image: "./productsImg/蜜桃.png"
             },
-            
+
 
 
             // --- 小米氣泡酒 (對應 id="rice") ---
@@ -430,7 +426,7 @@
                 price: 250,
                 image: "./productsImg/5.jpg"
             },
-            
+
             // --- 日系啤酒 (對應 id="japan") ---
             {
                 id: "j-1",
@@ -533,64 +529,29 @@
                 // 2. 幫被點擊的按鈕加上 active
                 btnElement.classList.add('active');
             }
-            // ---------------------------
-
-            // 更新標題名稱
-            // const titles = {
-            //     'all': 'Full Menu',
-            //     'national': 'Imported Craft Beer',
-            //     'domestic': 'Local Craft Beer',
-            //     'rice': 'Millet Sparkling Wine',
-            //     'japan': 'Japanese Beer'
-            // };
-            // titleElement.textContent = titles[category] || '精選酒單';
 
             // 篩選資料
-            if (category === 'all') {
-                renderProducts(products);
-            } else {
-                const filtered = products.filter(item => item.category === category);
-                renderProducts(filtered);
-            }
+
+            const filtered = products.filter(item => item.category === category);
+            renderProducts(filtered);
+
         }
-        renderProducts(products);
+        filterProducts("national");
     </script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const slides = document.querySelectorAll('.about-slider .slide');
-            let currentSlide = 0;
-            const slideInterval = 3000; // 3000毫秒 = 3秒換一次
 
-            function nextSlide() {
-                // 1. 移除目前這張的 active
-                slides[currentSlide].classList.remove('active');
-
-                // 2. 算出下一張的索引 (如果是最後一張，就回到 0)
-                currentSlide = (currentSlide + 1) % slides.length;
-
-                // 3. 幫下一張加上 active
-                slides[currentSlide].classList.add('active');
-            }
-
-            // 啟動計時器
-            setInterval(nextSlide, slideInterval);
-        });
-    </script>
 
     <script>
         // 監聽網頁滾動事件
         window.addEventListener('scroll', function () {
             const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 200) { // 如果滾動超過 50px
-                navbar.classList.add('scrolled'); // 加上變色 class
+            if (window.scrollY > 200) {
+                navbar.classList.add('scrolled'); // 加上變數 class
             } else {
                 navbar.classList.remove('scrolled'); // 變回透明
             }
         });
     </script>
-
-
 
     <script>
         // 1. 抓取按鈕元素
@@ -603,7 +564,7 @@
 
         function scrollFunction() {
             // 如果捲動超過 100px (document.body 是給 Safari 看的，documentElement 是給 Chrome/Firefox 看的)
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 600) {
                 mybutton.style.display = "block"; // 顯示按鈕
             } else {
                 mybutton.style.display = "none";  // 隱藏按鈕
@@ -614,7 +575,6 @@
         mybutton.addEventListener("click", backToTop);
 
         function backToTop() {
-            // behavior: 'smooth' 讓捲動有平滑動畫，不會瞬間跳上去
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>

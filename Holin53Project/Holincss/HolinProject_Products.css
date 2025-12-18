@@ -101,12 +101,6 @@ ul.navBar li a {
     ul.navBar li a {
         padding: 10px 0;
     }
-
-    .social-gap {
-        margin-left: 0;
-        padding-bottom: 10px;
-    }
-
 }
 
 
@@ -115,6 +109,7 @@ ul.navBar li a {
 body,
 html {
     height: 70%;
+    background-color: #111C20;
 }
 
 * {
@@ -128,9 +123,7 @@ html {
     background-position: center ;
     background-repeat: no-repeat;
     background-size: cover;
-    
-    /* border: 1px solid #C5A059; */
-}
+    }
 
 
 
@@ -141,13 +134,15 @@ html {
     }
     .header-desc {
         font-size: 0.95rem;
-        padding: 0 20px; /* 左右留點空隙以免太貼邊 */
+        padding: 0 20px; 
     }
 }
 
 
 
-/* -----重頭戲酒單 標題 + 酒卡----- */
+/* -----重頭戲酒單----- */
+
+/* 標題 */
 .subtitle-badge {
     background-color: rgba(197, 160, 89, 0.2);
     color: #C5A059;
@@ -161,16 +156,16 @@ html {
 .main-title {
     color: #C5A059;
     font-size: 2.5rem;
-    margin-top: 15px;
     font-weight: 500;
 }
 
 .sub-description {
     color: #888;
-    font-family: sans-serif;
+    font-family: "Noto Serif TC", sans-serif;
     letter-spacing: 1px;
 }
 
+/* 按鈕 */
 .btn-group {
     gap: 20px;
     margin-bottom: 20px;
@@ -200,7 +195,7 @@ html {
 
 
 .btn-custom:hover,
-.btn-custom.active {
+.btn-custom.active{
     background-color: #C5A059;
     color: #23373E;
     border-color: #C5A059;
@@ -208,19 +203,14 @@ html {
     transform: translateY(-2px);
 }
 
-.products-section {
-    background-color: #111C20;
-    padding-top: 60px;
-    padding-bottom: 80px;
-    color: #e0e0e0;
-}
 
-.beertext {
+.beertext[class^=btn]{
     color: #C5A059;
     font-family: "Noto Serif TC", sans-serif
 }
 
-/* --- 卡片本體 --- */
+
+/* --- 酒卡片本體 --- */
 .product-card {
     background-color:rgb(243, 232, 213) ;
     border-radius: 10px;
@@ -230,9 +220,7 @@ html {
 }
 
 .product-card:hover {
-    border-color: #C5A059;
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* 圖片區塊 */
@@ -240,16 +228,15 @@ html {
     width: 100%;
     height: 350px;
     overflow: hidden;
-    position: relative;
-    aspect-ratio: 3/4;
+    /* position: relative; */
+    /* aspect-ratio: 3/4; */
 }
 
 .beer-box img {
     width: 100%;
-    height: 100%;
+    height: 100%; 
     object-fit: cover;
     object-position: bottom center;
-    /*優先顯示下面，上面塞不下的就切掉 */
     transition: transform 0.5s ease;
 }
 
@@ -353,6 +340,7 @@ html {
     }
 }
 
+
 .footer-warning {
     background-color: #000;
     color: #888;
@@ -364,22 +352,22 @@ html {
 
 /* 至頂箭頭 */
 #myBtn {
-    display: none;
-    position: fixed;
-    bottom: 80px;
-    right: 30px;
-    z-index: 99;
-    border: none;
-    outline: none;
-    background-color: rgba(35, 55, 62, 0.95);
-    color: #ebe0cc;
-    padding: 15px;
-    border-radius: 10px;
-    font-size: 18px;
-}
+     display: none;
+     /*負責第0秒隱藏 開始滾動就變成JS的判斷式*/
+     position: fixed;
+     bottom: 80px;
+     right: 30px;
+     z-index: 99;
+     border: none;
+     background-color: rgba(35, 55, 62, 0.95);
+     color: #ebe0cc;
+     padding: 15px;
+     border-radius: 10px;
+     font-size: 18px;
+ }
 
-#myBtn:hover {
-    background-color: #555;
-    cursor: pointer;
-    transform: scale(1.1);
-}
+ #myBtn:hover {
+     background-color: #555;
+     cursor: pointer;
+     transform: scale(1.1);
+ }

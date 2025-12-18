@@ -121,7 +121,7 @@
                         <p class="text-secondary">如有活動需求、商業合作或其他疑問，歡迎填寫表單。</p>
                     </div>
 
-                    <form action="#">
+                    <form>
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <label for="name" class="form-label fw-bold text-secondary">姓名</label>
@@ -131,7 +131,7 @@
 
                             <div class="col-md-6">
                                 <label for="phone" class="form-label fw-bold text-secondary">手機</label>
-                                <input type="text" id="phone" name="phone" class="form-control custom-input"
+                                <input type="tel" id="phone" name="phone" class="form-control custom-input"
                                     placeholder="Your phone...">
                             </div>
 
@@ -256,48 +256,65 @@
 
 
     <script>
+
+        // GoogleSheet:https://docs.google.com/spreadsheets/d/1dsH6dm14FNQr_Zunbb4hzCurRJinKivTUIWZjyyvI6Q/edit?gid=0#gid=0
+
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxX8_UoeL2xF_PmQ9NhMe9MnztmWInTl3KPzaPSZHJUFHdEbUP9xms_fMhqFBffgO-3ZA/exec';
         // 取得按鈕並監聽點擊事件
         const submitBtn = document.getElementById('submitBtn');
 
-        submitBtn.addEventListener('click', function () {
+        submitBtn.addEventListener('click', async function (e) {
+            e.preventDefault();
             // 1. 抓取欄位資料
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
 
             // 2. 簡單驗證 (可選)
-            if (name === '' || phone === '') {
-                alert('請填寫姓名與手機！');
+            if (name === '' || phone === '' || message === '') {
+                alert('請填寫姓名、手機與內容！');
                 return;
-            }
-            if (message === '') {
-                alert('請填寫內容！');
-                return; // 這裡也會阻擋
             }
 
 
             // 3. 建立一個物件 (Object)
             const formData = {
+                timestampTW: new Date().toLocaleString(),
                 name: name,
                 phone: phone,
                 email: email,
                 message: message,
-                timestamp: new Date().toLocaleString() // 紀錄時間
             };
+        
 
-            // 4. 模擬資料庫操作
-            // 先從 LocalStorage 拿出舊資料 (如果沒有就是空陣列)
-            let database = JSON.parse(localStorage.getItem('contact_db')) || [];
+        // 4. 模擬資料庫操作
+        // 先從 LocalStorage 拿出舊資料 (如果沒有就是空陣列)
+        // let database = JSON.parse(localStorage.getItem('contact_db')) || [];
 
-            // 把新資料推進去
-            database.push(formData);
+        // 把新資料推進去
+        // database.push(formData);
 
-            // 把更新後的資料轉成 JSON 字串，存回去
-            localStorage.setItem('contact_db', JSON.stringify(database));
+        // 把更新後的資料轉成 JSON 字串，存回去
+        // localStorage.setItem('contact_db', JSON.stringify(database));
+
+
+        submitBtn.disabled = true;
+        submitBtn.value = '送出中...';
+
+        try {
+            // 5. 發送到 Google Sheets
+            const response = await fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors', // 重要：Google Apps Script 需要用 no-cors
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
 
             // 5. 成功回饋
-            console.log("目前的 JSON 資料庫內容：", database); // 你可以在 Console 看到結果
+            console.log("目前的 JSON 資料庫內容：", formData);
             alert('填寫成功！後續將由專人為您服務~');
 
             // 清空欄位
@@ -305,7 +322,18 @@
             document.getElementById('phone').value = '';
             document.getElementById('email').value = '';
             document.getElementById('message').value = '';
+
+        } catch (error) {
+            console.error('送出失敗:', error);
+            alert('送出失敗，請稍後再試或直接撥打電話聯絡我們！');
+        } finally {
+            // 7. 恢復按鈕狀態
+            submitBtn.disabled = false;
+            submitBtn.value = '送出表單';
+            submitBtn.style.opacity = '1';
+        }
         });
+
     </script>
 
 
