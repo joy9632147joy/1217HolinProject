@@ -191,7 +191,7 @@ const products = [
         volume: "330ml",
         abv: "4.5%",
         price: 160,
-        image: "./productsImg/醜啤.jpg"
+        image: "./productsImg/拉格.jpg"
     },
     {
         id: "d-5",
