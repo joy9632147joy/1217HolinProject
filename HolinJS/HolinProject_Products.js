@@ -17,7 +17,7 @@ const products = [
         volume: "330ml",
         abv: "6.2%",
         price: 180,
-        image: "./productsImg/IMG_4645.JPG"
+        image: "./productsImg/IMG_4645.jpg"
     },
     {
         id: "n-2",
@@ -26,7 +26,7 @@ const products = [
         volume: "568ml",
         abv: "9%",
         price: 300,
-        image: "./productsImg/IMG_4609.JPG"
+        image: "./productsImg/IMG_4609.jpg"
     },
     {
         id: " n-3",
@@ -35,7 +35,7 @@ const products = [
         volume: "440ml",
         abv: "6.1%",
         price: 380,
-        image: "./productsImg/IMG_4611.JPG"
+        image: "./productsImg/IMG_4611.jpg"
     },
     {
         id: "n-4",
@@ -44,7 +44,7 @@ const products = [
         volume: "440ml",
         abv: "6.8%",
         price: 380,
-        image: "./productsImg/IMG_4610.JPG"
+        image: "./productsImg/IMG_4610.jpg"
     },
     {
         id: "n-5",
@@ -53,7 +53,7 @@ const products = [
         volume: "355ml",
         abv: "6.5%",
         price: 280,
-        image: ".//productsImg//IMG_4617.JPG"
+        image: ".//productsImg//IMG_4617.jpg"
     },
     {
         id: "n-6",
@@ -62,7 +62,7 @@ const products = [
         volume: "375ml",
         abv: "4.4%",
         price: 220,
-        image: "./productsImg/IMG_4619.JPG"
+        image: "./productsImg/IMG_4619.jpg"
     },
     {
         id: "n-7",
@@ -71,7 +71,7 @@ const products = [
         volume: "375ml",
         abv: "6.5%",
         price: 300,
-        image: "./productsImg/IMG_4639.JPG"
+        image: "./productsImg/IMG_4639.jpg"
     },
     {
         id: " n-8",
@@ -80,7 +80,7 @@ const products = [
         volume: "375ml",
         abv: "5%",
         price: 220,
-        image: "./productsImg/IMG_4640.JPG"
+        image: "./productsImg/IMG_4640.jpg"
     },
     {
         id: "n-9",
@@ -89,7 +89,7 @@ const products = [
         volume: "473ml",
         abv: "6.8%",
         price: 300,
-        image: "./productsImg/IMG_4634.JPG"
+        image: "./productsImg/IMG_4634.jpg"
     },
     {
         id: "n-10",
@@ -98,7 +98,7 @@ const products = [
         volume: "440ml",
         abv: "9%",
         price: 380,
-        image: "./productsImg/IMG_4632.JPG"
+        image: "./productsImg/IMG_4632.jpg"
     },
     {
         id: "n-11",
@@ -107,7 +107,7 @@ const products = [
         volume: "440ml",
         abv: "6.8%",
         price: 380,
-        image: ".//productsImg//IMG_4633.JPG"
+        image: ".//productsImg//IMG_4633.jpg"
     },
     {
         id: "n-12",
@@ -116,7 +116,7 @@ const products = [
         volume: "330ml",
         abv: "5.5%",
         price: 250,
-        image: "./productsImg/IMG_4641.JPG"
+        image: "./productsImg/IMG_4641.jpg"
     },
     {
         id: "n-13",
@@ -245,7 +245,7 @@ const products = [
         volume: "330ml",
         abv: "6.9%",
         price: 200,
-        image: "./productsImg/IMG_4510.JPG"
+        image: "./productsImg/IMG_4510.jpg"
     },
     {
         id: "d-11",
@@ -254,7 +254,7 @@ const products = [
         volume: "330ml",
         abv: "5.5%",
         price: 200,
-        image: "./productsImg/IMG_4503.JPG"
+        image: "./productsImg/IMG_4503.jpg"
     },
     {
         id: "d-12",
@@ -263,7 +263,7 @@ const products = [
         volume: "330ml",
         abv: "5%",
         price: 200,
-        image: "./productsImg/IMG_4502.JPG"
+        image: "./productsImg/IMG_4502.jpg"
     },
     {
         id: "d-13",
@@ -303,7 +303,7 @@ const products = [
         volume: "330ml",
         abv: "6.9%",
         price: 250,
-        image: "./productsImg/3.JPG"
+        image: "./productsImg/3.jpg"
     },
     {
         id: "r-3",
@@ -312,7 +312,7 @@ const products = [
         volume: "330ml",
         abv: "8%",
         price: 250,
-        image: "./productsImg/2.JPG"
+        image: "./productsImg/2.jpg"
     },
     {
         id: "r-4",
@@ -321,7 +321,7 @@ const products = [
         volume: "330ml",
         abv: "8%",
         price: 250,
-        image: "./productsImg/4.JPG"
+        image: "./productsImg/4.jpg"
     },
     {
         id: "r-5",
@@ -341,7 +341,7 @@ const products = [
         volume: "330ml",
         abv: "4%",
         price: 230,
-        image: "./productsImg/6.JPG"
+        image: "./productsImg/6.jpg"
     },
     {
         id: "j-2",
@@ -350,7 +350,7 @@ const products = [
         volume: "330ml",
         abv: "5%",
         price: 230,
-        image: "./productsImg/7.JPG"
+        image: "./productsImg/7.jpg"
     },
     {
         id: "j-3",
@@ -359,7 +359,7 @@ const products = [
         volume: "330ml",
         abv: "5%",
         price: 230,
-        image: "./productsImg/8.JPG"
+        image: "./productsImg/8.jpg"
     },
     {
         id: "j-4",
@@ -368,7 +368,7 @@ const products = [
         volume: "633ml",
         abv: "5%",
         price: 160,
-        image: "./productsImg/IMG_4622.JPG"
+        image: "./productsImg/IMG_4622.jpg"
     },
     {
         id: "j-5",
@@ -377,7 +377,7 @@ const products = [
         volume: "633ml",
         abv: "5%",
         price: 200,
-        image: "./productsImg/IMG_4620.JPG"
+        image: "./productsImg/IMG_4620.jpg"
     },
 
     // --- 紅白酒 (對應 id="grapewine") ---
