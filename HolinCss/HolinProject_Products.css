@@ -241,6 +241,8 @@ html {
     transition: transform 0.5s ease;
 }
 
+
+
 /* 手機版圖片調整 */
 @media (max-width: 768px) {
     .beer-box {

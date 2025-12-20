@@ -11,7 +11,7 @@ const newsData = [
         displayDate: "2025.12.31(三) 21:30-00:30",
         location: "Holin53",
         price: "$1499",
-        content: "精釀啤酒喝到飽 (當天全站席，無提供餐點)",
+        content: "精釀啤酒喝到飽 (當天全站席，無供餐)",
         guest: "DJ　Labbi｜Seven",
         img: "./newsImg/DJ.jpg"
     },

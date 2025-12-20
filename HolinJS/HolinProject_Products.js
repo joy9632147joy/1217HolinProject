@@ -186,12 +186,12 @@ const products = [
     },
     {
         id: "d-4",
-        name: "醜啤-拉格",
+        name: "醜啤",
         category: "domestic",
         volume: "330ml",
         abv: "4.5%",
         price: 160,
-        image: "./productsImg/拉格.jpg"
+        image: "./productsImg/醜啤.jpg"
     },
     {
         id: "d-5",

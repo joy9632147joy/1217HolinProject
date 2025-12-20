@@ -287,48 +287,76 @@ html {
 
 @media (max-width: 768px) {
 
-    /* --- 問題二：圖片跟文字改為「上下」排列 --- */
-    /* 使用跟原本一樣強的選擇器，寫在後面就能覆蓋，免用 !important */
-    #memory-content .row,
+    /* --- 歷年活動卡片:改為上下排列 --- */
+    #memory-content .row {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #memory-content .col-lg-6 {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 !important;
+    }
+
+    /* 移除卡片內的 row gap,讓圖文緊密排列 */
+    #memory-content .event-card-wrapper .row {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* 圖片區塊填滿寬度 */
+    #memory-content .event-card-wrapper .col-5,
+    #memory-content .event-card-wrapper .col-7 {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        flex: none !important;
+    }
+
+    /* 圖片容器調整 */
+    #memory-content .event-img-small {
+        width: 100%;
+        height: 250px;
+        margin-bottom: 15px;
+    }
+
+    /* 文字區塊內距調整 */
+    #memory-content .event-card-wrapper .col-7 {
+        padding: 0 15px 15px 15px !important;
+    }
+
+    /* --- 主打活動:改為上下排列 --- */
     #major-content .row {
         display: flex;
         flex-direction: column;
-        /* 直向排列 */
         gap: 0;
-        /* 清除不必要的間距，讓它自然排列 */
+        padding: 20px !important;
     }
 
-    /* 讓圖片與文字區塊寬度都佔滿 100% */
-    #memory-content .col-lg-6,
-    #major-content .col-lg-6 {
+    #major-content .col-lg-5,
+    #major-content .col-lg-7 {
         width: 100%;
         max-width: 100%;
-        padding-right: 12px;
-        /* 稍微留點呼吸空間 */
-        padding-left: 12px;
+        padding: 0 !important;
     }
 
-    /* --- 問題三：文字疊在一起 (解決高度不夠) --- */
-    /* 針對金條文字框 */
-    .activity-info .fw-bold {
-        height: auto;
-        /* 關鍵：高度自動，隨文字變長 */
-        min-height: auto;
-        /* 清除最小高度限制 */
-
-        margin-top: 15px;
-        /* 與上方圖片拉開距離 */
-        margin-bottom: 20px;
-        /* 與下方按鈕拉開距離 */
-        padding: 20px;
-        /* 內距 */
-
-        /* 避免文字超出畫面 */
+    /* 主打活動圖片容器 */
+    #major-content .activity-img-wrapper {
         width: 100%;
-        box-sizing: border-box;
+        margin-bottom: 20px;
     }
 
-    /* 調整標題大小，避免手機版標題也爆掉 */
+    /* 主打活動文字區塊 */
+    #major-content .ps-lg-4 {
+        padding: 0 !important;
+    }
+
+    
+
+    /* 調整標題大小 */
     #news-content h2 {
         font-size: 1.8rem;
         margin-bottom: 15px;
@@ -361,7 +389,7 @@ html {
 
 
 /* 確保每個 col 高度一致 */
-#memory-content .col-12.col-lg-6 {
+#memory-content .col-12 .col-lg-6 {
     display: flex;
 }
 

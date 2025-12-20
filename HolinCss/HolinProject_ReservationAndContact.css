@@ -163,51 +163,6 @@ html {
 
 
 
-
-
-/* -----聯絡我們 表格----- */
-
-/* input[type=text],
-select,
-textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-
-input[type=submit] {
-    background-color: #C5A059;
-    color: white;
-    padding: 11px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type=submit]:hover {
-    background-color: #C5A059;
-}
-
-.line {
-    background-color: #40b946;
-    color: white;
-    padding: 11px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    align-items: center;
-}
-
-.form {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-} */
-
-
-
 /* --- 新增：訂位與聯絡我們 分流樣式 --- */
 
 /* 1. 左側(或上方)的訂位區塊背景 */
@@ -230,6 +185,14 @@ input[type=submit]:hover {
     display: inline-block;
     transition: all 0.3s ease;
     /* box-shadow: 0 4px 15px rgba(6, 199, 85, 0.4);  */
+}
+
+.tel,
+.drink{
+    font-size: 1.1rem; 
+    color: #23373E; 
+    font-family: 'Noto Serif TC', serif;
+    line-height: 1.5;
 }
 
 .btn-line-large:hover {
