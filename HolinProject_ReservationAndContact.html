@@ -121,15 +121,17 @@
                     <form>
                         <div class="row g-3">
                             <div class="col-md-6">
-                                <label for="name" class="form-label fw-bold text-secondary">姓名</label>
+                                <label for="name" class="form-label fw-bold text-secondary">姓名<span class="text-danger">*</span></label>
                                 <input type="text" id="name" name="firstname" class="form-control custom-input"
                                     placeholder="Your name...">
                             </div>
 
                             <div class="col-md-6">
-                                <label for="phone" class="form-label fw-bold text-secondary">手機</label>
-                                <input type="tel" id="phone" name="phone" class="form-control custom-input"
-                                    placeholder="09-xxxx-xxxx">
+                                <label for="phone" class="form-label fw-bold text-secondary">手機<span class="text-danger">*</span></label>
+                                <input type="tel" id="phone" name="phone" class="form-control custom-input" 
+                                    pattern="09\d{8}"
+                                    placeholder="ex:0912345678"
+                                    title="手機請輸入正確格式">
                             </div>
 
                             <div class="col-12">
@@ -139,7 +141,7 @@
                             </div>
 
                             <div class="col-12">
-                                <label for="subject" class="form-label fw-bold text-secondary">特殊需求 / 訊息</label>
+                                <label for="subject" class="form-label fw-bold text-secondary">特殊需求 / 訊息<span class="text-danger">*</span></label>
                                 <textarea id="message" name="subject" class="form-control custom-input"
                                     placeholder="Please tell us your special requiration..."
                                     style="height: 150px"></textarea>
